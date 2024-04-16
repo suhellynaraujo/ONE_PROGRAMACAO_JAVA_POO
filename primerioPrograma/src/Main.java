@@ -14,7 +14,13 @@ public class Main {
         System.out.println(media);
 
         String sinopse;
-        sinopse = "Filme Top Gun.";
+//       text box - a partir do java 15
+//        sinopse = """
+//            Filme Top Gun;
+//            Filme Muito bom!
+//            Ano de lançamento
+//            """ + anoDeLancamento;
+ //       System.out.println(sinopse);
 
     }
 }
