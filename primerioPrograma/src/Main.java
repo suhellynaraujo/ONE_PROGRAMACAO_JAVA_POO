@@ -7,6 +7,7 @@ public class Main {
         System.out.println(" Ano de lançamento " + anoDeLancamento);
 
         boolean incluidoNoPlano = true;
-        
+
+        double notaDoFilme = 8.1;
     }
 }
