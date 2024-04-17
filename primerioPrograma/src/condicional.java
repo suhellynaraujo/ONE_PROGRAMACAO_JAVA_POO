@@ -6,6 +6,8 @@ public class condicional {
 
         if (anoDeLancamento >= 2024){
             System.out.println("Lançamento que os clientes estão curtindo:");
+        }else {
+            System.out.println("Filme retrô que vale apena assistir:");
         }
 
 
