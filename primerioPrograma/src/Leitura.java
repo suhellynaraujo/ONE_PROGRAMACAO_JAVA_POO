@@ -8,5 +8,9 @@ public class Leitura {
         //leitura da entrada de dados digitado pelo usuario
         String filme = leitura.nextLine();
         System.out.println(filme);
+
+        System.out.println("Qual o ano de lançamento?");
+        int anoDeLancamento = leitura.nextInt();
+        
     }
 }
