@@ -10,8 +10,16 @@ public class condicional {
         }else {
             System.out.println("Filme retrô que vale apena assistir!");
         }
-
+    //SOMENTE UMA CONDIÇÃO VERDADEIRA
+    //incluidoNoPlano = true ou tipoPlano ="plus"
         if (incluidoNoPlano == true || tipoPlano.equals("plus")){
+            System.out.println("Filme Liberado!");
+        }else {
+            System.out.println("Deve pagar a locação!");
+        }
+    //AS DUAS CONDIÇÕES TEM QUE SER VERDADEIR
+    //   incluidoNoPlano = true e tipoPlano ="plus"
+        if (incluidoNoPlano == true && tipoPlano.equals("plus")){
             System.out.println("Filme Liberado!");
         }else {
             System.out.println("Deve pagar a locação!");
