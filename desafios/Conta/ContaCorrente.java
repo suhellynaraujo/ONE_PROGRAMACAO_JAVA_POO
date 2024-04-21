@@ -5,15 +5,17 @@ public class ContaCorrente {
     public static void main(String[] args) {
 
         Scanner scann = new Scanner(System.in);
-        System.out.println("*******************************************");
-        String nomeCliente = "Suhellyn Araujo";
+
+        String nomeCliente = "Carla";
         String tipoConta = "Conta Corrente";
         double saldoInicial = 2500.00 ;
-        System.out.println("Nome: " + nomeCliente);
+
+        System.out.println("*******************************************");
+        System.out.println("\nNome: " + nomeCliente);
         System.out.println("Tipo de conta: " + tipoConta);
         //String saldoAtualFormatado = String.format("%.2f", saldoInicial);
         System.out.println("Saldo Inicial: " + String.format("%.2f", saldoInicial));
-        System.out.println("*******************************************");
+        System.out.println("\n*******************************************");
 
         int opcao = 0;
         double saldoAtualizado = saldoInicial;
