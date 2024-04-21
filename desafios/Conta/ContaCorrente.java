@@ -22,13 +22,13 @@ public class ContaCorrente {
 
         while (opcao != 4) {
             // menu
-            System.out.println("Operações");
+            System.out.println("\nOperações");
             System.out.println("1 - Consultar saldos");
             System.out.println("2 - Receber valor");
             System.out.println("3 - Transferir valor");
             System.out.println("4 - Sair");
 
-            System.out.println("Digite a opção desejada:");
+            System.out.println("\nDigite a opção desejada:");
             opcao = scann.nextInt();
 
             if (opcao == 1) {
