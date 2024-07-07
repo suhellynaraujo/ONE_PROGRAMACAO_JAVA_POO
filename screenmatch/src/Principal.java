@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
@@ -6,7 +7,6 @@ public class Principal {
         // novo objeto do tipo filme
         //tipo referencia
         Filme meuFilme = new Filme();
-
         meuFilme.setNome("O poderoso chefão");
         meuFilme.setAnoLancamento(1970);
         meuFilme.setDuracaoEmMinutos(188);
@@ -30,6 +30,18 @@ public class Principal {
         lost.setEpisodioPorTemporada(10);
         lost.setMinutoPorEpsodio(50);
         System.out.println("Duração par amaratonar a série: " + lost.getDuracaoEmMinutos());
+
+
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("Avatar");
+        outroFilme.setAnoLancamento(2023);
+        outroFilme.setDuracaoEmMinutos(200);
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);
+        System.out.println(calculadora.getTempoTotal());
     }
 
 }
