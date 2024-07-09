@@ -5,6 +5,8 @@ import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -24,12 +26,27 @@ public class PrincipalComListas {
         // para cada titulo(item) da minha lista  itere ...
         for (Titulo item: lista) {
             System.out.println(item.getNome());
-            // cast de da classe Filme
             if (item instanceof Filme){
+                // cast de da classe Filme
                 Filme filme = (Filme) item;
                 System.out.println("Classificação: " + filme.getClassificacao());
             }
 
         }
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam");
+        buscaPorArtista.add("Jacque");
+        buscaPorArtista.add("Paulo");
+        System.out.println(buscaPorArtista);
+
+        // ordenar por ordem alfabetica
+        Collections.sort(buscaPorArtista);
+        System.out.println("Depois da ordenação: ");
+        System.out.println(buscaPorArtista);
+        System.out.println("Lista de titulos ordenados");
+        Collections.sort(lista);
+        System.out.println(lista);
+        // comparador
+        lista.sort(Comparator.comparing(Titulo::getAnoLancamento));
     }
 }

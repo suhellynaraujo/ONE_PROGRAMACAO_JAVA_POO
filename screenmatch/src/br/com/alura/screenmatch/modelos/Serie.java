@@ -51,4 +51,10 @@ public class Serie extends Titulo {
     // subclasse (classes filhas) - especialização
     // Atributos (campos)
     // Metodos (fuções)
+
+
+    @Override
+    public String toString() {
+        return "Série: " + this.getNome() + "(" + this.getAnoLancamento() + ")";
+    }
 }
