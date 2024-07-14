@@ -38,7 +38,7 @@ public class PrincipalComBuscas {
         // deserialização
         // pegar o json e tranformar na classe titulo
         //Titulo meuTitulo = gson.fromJson(json, Titulo.class);
-        //System.out.println(meuTitulo);
+        //System.out.println(meuTitulo);RECORD
 
         //padão de nomeclatura, para pegar com letra maiuscula que vem da api
         Gson gson = new GsonBuilder()
@@ -46,6 +46,10 @@ public class PrincipalComBuscas {
                 .create();
         TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
         System.out.println(meuTituloOmdb);
+
+        Titulo meuTitulo = new Titulo(meuTituloOmdb);
+        System.out.println("Título já convertido: ");
+        System.out.println(meuTitulo);
 
 
     }
