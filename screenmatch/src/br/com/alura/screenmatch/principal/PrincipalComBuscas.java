@@ -29,7 +29,13 @@ public class PrincipalComBuscas {
         String json = response.body();
         System.out.println(json);
 
+        // biblioteca do google para criar textos JSON e transformar em objetos
+        Gson gson = new Gson();
 
+        // deserialização
+        // pegar o json e tranformar na classe titulo
+        Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+        System.out.println("Título: " + meuTitulo.getNome());
     }
 }
 
