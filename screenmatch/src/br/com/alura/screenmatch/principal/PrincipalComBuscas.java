@@ -1,7 +1,10 @@
 package br.com.alura.screenmatch.principal;
 
 import br.com.alura.screenmatch.modelos.Titulo;
+import br.com.alura.screenmatch.modelos.TituloOmdb;
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.net.URI;
@@ -30,12 +33,21 @@ public class PrincipalComBuscas {
         System.out.println(json);
 
         // biblioteca do google para criar textos JSON e transformar em objetos
-        Gson gson = new Gson();
+        //Gson gson = new Gson();
 
         // deserialização
         // pegar o json e tranformar na classe titulo
-        Titulo meuTitulo = gson.fromJson(json, Titulo.class);
-        System.out.println("Título: " + meuTitulo.getNome());
+        //Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+        //System.out.println(meuTitulo);
+
+        //padão de nomeclatura, para pegar com letra maiuscula que vem da api
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .create();
+        TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+        System.out.println(meuTituloOmdb);
+
+
     }
 }
 

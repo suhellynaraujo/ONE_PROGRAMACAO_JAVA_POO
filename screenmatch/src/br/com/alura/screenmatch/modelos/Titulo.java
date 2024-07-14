@@ -1,8 +1,13 @@
 package br.com.alura.screenmatch.modelos;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo implements Comparable<Titulo> {
     //abstração
+    // informando para o Gson da classe principalComBuscas que esses são os parametros em que ele deve buscar de acordo com os parametros da api
+    @SerializedName("Title")
     private String nome;
+    @SerializedName("Year")
     private int anoLancamento;
     private boolean incluidoNoPlano;
     private double somaAvaliacoes;
@@ -69,5 +74,11 @@ public class Titulo implements Comparable<Titulo> {
     @Override
     public int compareTo(Titulo outroTitulo) {
         return this.getNome().compareTo(outroTitulo.getNome());
+    }
+
+    @Override
+    public String toString() {
+        return  "nome='" + nome + '\'' +
+                ", anoLancamento=" + anoLancamento;
     }
 }
