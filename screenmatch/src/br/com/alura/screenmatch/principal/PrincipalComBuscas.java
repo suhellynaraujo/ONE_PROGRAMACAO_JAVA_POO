@@ -23,6 +23,12 @@ public class PrincipalComBuscas {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(endereco))
                 .build();
+        // resposta da api
+        HttpResponse<String> response = client
+                .send(request, HttpResponse.BodyHandlers.ofString());
+        String json = response.body();
+        System.out.println(json);
+
 
     }
 }
